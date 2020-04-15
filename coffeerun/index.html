@@ -83,5 +83,29 @@
     <script src="scripts/datastore.js" charset="utf-8"></script>
     <script src="scripts/truck.js" charset="utf-8"></script>
     <script src="scripts/main.js" charset="utf-8"></script>
+  
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAo8_v_5fbVegmCrbMZ4Nlenit-KVylkh8",
+    authDomain: "coffeerun-fb.firebaseapp.com",
+    databaseURL: "https://coffeerun-fb.firebaseio.com",
+    projectId: "coffeerun-fb",
+    storageBucket: "coffeerun-fb.appspot.com",
+    messagingSenderId: "597375342519",
+    appId: "1:597375342519:web:d592fa829f4a8a9ef0fa32",
+    measurementId: "G-WL2P231YJF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
