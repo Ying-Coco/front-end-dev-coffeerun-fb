@@ -3,4 +3,4 @@
 CPSC349 Homework 5
 Ying Wen
 
-![][Coffeerun_fb_screenshot.png]
+![](Coffeerun_fb_screenshot.png)
