@@ -36,8 +36,7 @@
       console.log(serverResponse);
       cb(serverResponse);
       db.collection('users').doc(key)
-      .get().then(doc => {
-        console.log(doc.data())
+      .get().then(doc => {console.log(doc.data())
       })
     });
   };
