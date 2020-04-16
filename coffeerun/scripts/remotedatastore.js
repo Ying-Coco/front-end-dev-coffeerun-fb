@@ -23,8 +23,7 @@
     $.get(this.serverUrl, function (serverResponse) {
       console.log(serverResponse);
       db.collection('users')
-      .get
-      .then(snap =>
+      .get.then(snap =>
         snap.forEach(doc => {
           console.log(doc.data());
         }))
