@@ -14,7 +14,7 @@
 
   RemoteDataStore.prototype.add = function (key, val) {
     $.post(this.serverUrl, val, function (serverResponse) {
-      db.collection("users").doc(key.set(val));
+      db.collection('users').doc(key).set(val);
       console.log(serverResponse);
     });
   };
@@ -22,7 +22,7 @@
   RemoteDataStore.prototype.getAll = function (cb) {
     $.get(this.serverUrl, function (serverResponse) {
       console.log(serverResponse);
-      db.collection("users")
+      db.collection('users')
       .get
       .then(snap =>
         snap.forEach(doc => {
@@ -36,7 +36,7 @@
     $.get(this.serverUrl + '/' + key, function (serverResponse) {
       console.log(serverResponse);
       cb(serverResponse);
-      db.collection("users").doc(key)
+      db.collection('users').doc(key)
       .get().then(doc => {
         console.log(doc.data())
       })
@@ -44,7 +44,7 @@
   };
 
   RemoteDataStore.prototype.remove = function (key) {
-    db.collection("users").doc(key).delete();
+    db.collection('users').doc(key).delete();
     $.ajax(this.serverUrl + '/' + key, {
       type: 'DELETE'
     });
